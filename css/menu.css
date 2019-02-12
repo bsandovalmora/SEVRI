@@ -71,3 +71,32 @@ nav.navbar.faded {
 	height: 5%;
 	background-color: #193441;
 }
+
+.card-body{
+	margin-left: 45%;
+}
+
+.card .btn.btn-primary {
+	background-color: transparent;
+	border: none;
+	color: #f1b802;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	transition: 0.3s;
+}
+
+.card .btn.btn-primary:hover {
+	font-size: 1.5rem;
+}
+
+.card .btn.btn-primary:focus,
+.card .btn.btn-primary:active:focus {
+	box-shadow: none;
+}
+
+.card .btn.btn-primary:active {
+	color: #f1b802;
+	background-color: transparent;
+	border-color: transparent;
+}
