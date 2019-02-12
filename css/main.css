@@ -21,32 +21,6 @@
 	min-height: 25vh;
 	padding: 10px;
 }
-
-.card .btn.btn-primary {
-	background-color: transparent;
-	border: none;
-	color: #f1b802;
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-	transition: 0.3s;
-}
-
-.card .btn.btn-primary:hover {
-	font-size: 1.5rem;
-}
-
-.card .btn.btn-primary:focus,
-.card .btn.btn-primary:active:focus {
-	box-shadow: none;
-}
-
-.card .btn.btn-primary:active {
-	color: #f1b802;
-	background-color: transparent;
-	border-color: transparent;
-}
-
 .card-header {
 	border-top-left-radius: 10px !important;
 	border-top-right-radius: 10px !important;
