@@ -21,11 +21,6 @@
 	min-height: 25vh;
 	padding: 10px;
 }
-.card-header {
-	border-top-left-radius: 10px !important;
-	border-top-right-radius: 10px !important;
-	border-bottom: none;
-}
 
 
 .card .card-header {
@@ -33,9 +28,9 @@
 }
 
 .card-container {
-	margin: auto;
-	padding: 5vh 5vw 5vh 5vw;
-	width: 90%;
+	margin-left: 15%;
+  	padding: 1px 16px;
+  	height: 1000px;
 }
 
 .card-container .title {

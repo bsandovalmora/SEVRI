@@ -23,31 +23,20 @@
   		<hr>
 	</div>
 	<hr>
-	<div class="navbar-container">
-		<nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
-			<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-			 aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-				<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="collapsibleNavId">
-				<ul class="navbar-right navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="main.html">Inicio <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SEVRI</a>
-						<div class="dropdown-menu" aria-labelledby="dropdownId">
-							<a class="dropdown-item" href="diccionario.html">Diccionario de Riesgos</a>
-							<a class="dropdown-item" href="identificacion.html">Identificacion de Riesgos</a>
-							<a class="dropdown-item" href="Analisis.html">Analisis y Evaluacion de Riesgos</a>
-							<a class="dropdown-item" href="Administracion.html">Administracion de Riesgos</a>
-							<a class="dropdown-item" href="comunicacion.html">Comunicacion de Riesgos</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
+	<ul class="sidenav">
+  		<li><a class="active" href="#home">Inicio</a></li>
+  		<li><a href="#news">SEVRI</a>
+   		 	<ul>
+	      		<li><a href="diccionario.html">Diccionario de Riesgos</a></li>
+	      		<li><a href="identificacion.html">Identificacion de Riesgos</a></li>
+	      		<li><a href="Analisis.html">Analisis y Evaluacion de Riesgos</a></li>
+	      		<li><a href="Administracion.html">Administracion de Riesgos</a></li>
+	      		<li><a href="comunicacion.html">Comunicacion de Riesgos</a></li>
+    		</ul>
+
+  		</li>
+  
+	</ul>
 	<div class="container">
 		<div class="texto">
 			<h2 style="background-color: #193441; color: white" >Comunicacion de Riesgos</h2>
@@ -65,10 +54,12 @@
   				<textarea class="form-control" rows="5" id="descripcion" placeholder="Resultado de la evaluación" style="margin-top: 2%;"></textarea>
 			</div>
 			<hr>
+			<a href="Administracion.html" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 			<button type="button" class="btn btn-primary">Agregar</button>
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
     		Consulta
   			</button>
+  			<hr>
 
 
   			<div class="modal" id="myModal">
@@ -121,14 +112,6 @@
 		</div>
 	</div>
 	<hr>
-	<div class="card-body">
-		<a href="Administracion.html" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-	</div>
-
-	<footer class="foo">
-		
-	</footer>
-
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="	anonymous"></script>

@@ -1,68 +1,78 @@
-@keyframes fadein {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes slideInFromLeft {
-	0% {
-		transform: translateX(-100%);
-	}
-
-	100% {
-		transform: translateX(0);
-	}
-}
-
-html {
-	scroll-behavior: smooth;
-}
 
 body {
 	/* Common base font size*/
-	font-size: 22px;
+	font-size: 15px;
 	/* Common font family */
 	font-family: 'Open Sans', sans-serif;
 	color: #555;
 }
 
-nav.navbar {
-	padding: 2vh;
-	background-color: transparent !important;
-	border-bottom: 0px transparent;
-	transition: 1s;
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
-nav.navbar.faded {
-	background-color: #3a560bd5 !important;
+ul.sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+  background-color: #91aa9d;
+  color: white;
 }
 
-.navbar-right {
-	position: absolute;
-	right: 32%;
+ul.sidenav li a:hover:not(.active) {
+  background-color: #193441;
+  color: white;
+  box-shadow: 0 10px 12px 0 rgba(102, 102, 102, 0.678);
 }
 
-.nav-link {
-	border-bottom: rgba(255, 255, 255, 0.753) solid;
-	transition: 0.5s;
+.sidenav li > ul{
+  width: 160px;
+  height: 50px;
+  display: none;
+  font-size: 15px;
+  list-style: none;/*Quita las vinetas*/
+
+}
+.sidenav li:hover > ul{
+  display: block;
+  
+
+}
+.sidenav >li>ul li a:hover{
+  background-color: #70B431;
 }
 
-.nav-link:hover {
-	border-bottom: #f1b802 solid;
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+  card-container{margin-left: 0;}
 }
 
-
-
-.foo{
-	border: 1px;
-	padding: 5%;
-	width: 100%;
-	height: 5%;
-	background-color: #193441;
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
 }
 
 
@@ -89,4 +99,16 @@ nav.navbar.faded {
 	color: #f1b802;
 	background-color: transparent;
 	border-color: transparent;
+}
+
+
+.container{
+  margin-left: 15%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+
+  .container{margin-left: 0;}
 }
