@@ -16,6 +16,7 @@
   
 	<link rel="stylesheet" type="text/css" href="css/identificacion.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
+  <link rel="stylesheet" type="text/css" href="css/table.css">
 </head>
 <body>
 
@@ -24,11 +25,11 @@
 	</div>
 	<hr>
 	<ul class="sidenav">
-      <li><a class="active" href="main.html">Inicio</a></li>
-      <li><a href="#news">SEVRI</a>
+      <li><a href="main.html">Inicio</a></li>
+      <li><a class="active" href="">SEVRI</a>
         <ul>
             <li><a href="diccionario.html">Diccionario de Riesgos</a></li>
-            <li><a href="identificacion.html">Identificacion de Riesgos</a></li>
+            <li><a class="active" href="identificacion.html">Identificacion de Riesgos</a></li>
             <li><a href="Analisis.html">Analisis y Evaluacion de Riesgos</a></li>
             <li><a href="Administracion.html">Administracion de Riesgos</a></li>
             <li><a href="comunicacion.html">Comunicacion de Riesgos</a></li>
@@ -42,152 +43,187 @@
 		<div class="row">
     		<div class="col-sm-4">
       			<h3 style="margin-top: 1%; margin-bottom: 2%">Riesgos Generales</h3>
-      			<input type="text" class="form-control form-control" placeholder="Codigo" style="margin-top: 2%;">
-      			<input type="text" class="form-control form-control" placeholder="Clasificacion General" style="margin-top: 2%;">
+      			<input type="text" class="form-control form-control" placeholder="Código" style="margin-top: 2%;">
+      			<label for="sel1" style="text-align: left; margin-top: 2%;">Clasificacion:</label>
+            <select class="form-control form-control" id="sel1" name="sellist1">
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
       			<input type="text" class="form-control form-control" placeholder="Riesgo" style="margin-top: 2%;">
-      			<input type="text" class="form-control form-control" placeholder="Categoria de riesgo" style="margin-top: 2%;">
-      			<input type="text" class="form-control form-control" placeholder="Subcategoria" style="margin-top: 2%;">
+      			<label for="sel1" style="text-align: left; margin-top: 2%;">Categoría de Riesgo:</label>
+            <select class="form-control form-control" id="sel1" name="sellist1">
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+      			<label for="sel1" style="text-align: left; margin-top: 2%;">SubCategoría de riesgo:</label>
+            <select class="form-control form-control" id="sel1" name="sellist1">
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
       			<input type="text" class="form-control form-control" placeholder="Causas" style="margin-top: 2%;">
       			<input type="text" class="form-control form-control" placeholder="Eventos" style="margin-top: 2%;">
       			<input type="text" class="form-control form-control" placeholder="Consecuencias" style="margin-top: 2%;">
       			<input type="date" class="form-control form-control" style="margin-top: 2%;">
       			<hr>
       			<button type="button" class="btn btn-primary">Agregar</button>
-      			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    		Consulta
-  			</button>
-
-
-  			<div class="modal" id="myModal">
-    			<div class="modal-dialog">
-      				<div class="modal-content">
-      
-   
-        				<div class="modal-header">
-          					<h4 class="modal-title">Consulta de Riesgos Generales</h4>
-          					<button type="button" class="close" data-dismiss="modal">&times;</button>
-        				</div>
-        
-  
-        				<div class="modal-body">
-        					<input type="text" class="form-control form-control" placeholder="Codigo..." style="margin-top: 1%;">
-        					<hr>
-        					<button type="button" class="btn btn-primary">Buscar</button>
-        					<hr>
-        					<table class="table">
-    							<thead>
-      								<tr>
-        								<th>Firstname</th>
-        								<th>Lastname</th>
-        								<th>Email</th>
-      								</tr>
-    							</thead>
-    							<tbody>
-      								<tr>
-        								<td>John</td>
-        								<td>Doe</td>
-        								<td>john@example.com</td>
-      								</tr>
-      								<tr>
-        								<td>Mary</td>
-        								<td>Moe</td>
-        								<td>mary@example.com</td>
-      								</tr>
-      								<tr>
-        								<td>July</td>
-        								<td>Dooley</td>
-        								<td>july@example.com</td>
-      								</tr>
-    							</tbody>
-  							</table>
-          				
-        				</div>
-        
-        				<div class="modal-footer">
-          					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        				</div>
-        
-      				</div>
-    			</div>
-  			</div>
+            <a href="#consulta_1" class="btn btn-info" role="button">Consulta</a>
+      			
 			<hr>
       			
     		</div>
     		<div class="col-sm-4">
       			<h3 style="margin-top: 1%; margin-bottom: 2%">Riesgos Especificos</h3>
-      			<input type="text" class="form-control form-control" placeholder="Codigo" style="margin-top: 2%;">
-      			<input type="text" class="form-control form-control" placeholder="Area de riesgo" style="margin-top: 2%;">
+      			<input type="text" class="form-control form-control" placeholder="Código" style="margin-top: 2%;">
       			<input type="text" class="form-control form-control" placeholder="Riesgo particular" style="margin-top: 2%;">
-      			<input type="text" class="form-control form-control" placeholder="Dependencia de riesgo" style="margin-top: 2%;">
-      			<input type="text" class="form-control form-control" placeholder="Nivel de riesgo inherente" style="margin-top: 2%;">
-      			<input type="text" class="form-control form-control" placeholder="Objetivo del proceso" style="margin-top: 2%;">
+            <label for="sellist1">Area de riesgo</label>
+      			<select class="form-control form-control" id="sel1" name="sellist1">
+              <option>Categoria</option>
+              <option>Administracion</option>
+              <option>Academia</option>
+              <option>DECAT</option>
+              <option>DPD</option>
+              <option>Decanatura</option>
+            </select>
+            <label for="sellist1">Dependencia del riesgo"</label>
+            <select class="form-control form-control" id="sel1" name="sellist1">
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
       			<input type="text" class="form-control form-control" placeholder="Causas" style="margin-top: 2%;">
-      			<input type="text" class="form-control form-control" placeholder="Eventos" style="margin-top: 2%;">
       			<input type="text" class="form-control form-control" placeholder="Consecuencias" style="margin-top: 2%;">
       			<input type="date" class="form-control form-control" style="margin-top: 2%;">
       			<hr>
       			<button type="button" class="btn btn-primary">Agregar</button>
-      			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    		Consulta
-  			</button>
-
-
-  			<div class="modal" id="myModal">
-    			<div class="modal-dialog">
-      				<div class="modal-content">
-      
-   
-        				<div class="modal-header">
-          					<h4 class="modal-title">Consulta de Riesgos Especificos</h4>
-          					<button type="button" class="close" data-dismiss="modal">&times;</button>
-        				</div>
-        
-  
-        				<div class="modal-body">
-        					<input type="text" class="form-control form-control" placeholder="Codigo..." style="margin-top: 1%;">
-        					<hr>
-        					<button type="button" class="btn btn-primary">Buscar</button>
-        					<hr>
-        					<table class="table">
-    							<thead>
-      								<tr>
-        								<th>Firstname</th>
-        								<th>Lastname</th>
-        								<th>Email</th>
-      								</tr>
-    							</thead>
-    							<tbody>
-      								<tr>
-        								<td>John</td>
-        								<td>Doe</td>
-        								<td>john@example.com</td>
-      								</tr>
-      								<tr>
-        								<td>Mary</td>
-        								<td>Moe</td>
-        								<td>mary@example.com</td>
-      								</tr>
-      								<tr>
-        								<td>July</td>
-        								<td>Dooley</td>
-        								<td>july@example.com</td>
-      								</tr>
-    							</tbody>
-  							</table>
-          				
-        				</div>
-        
-        				<div class="modal-footer">
-          					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        				</div>
-        
-      				</div>
-    			</div>
-  			</div>
-			<hr>
+            <a href="#consulta_2" class="btn btn-info" role="button">Consulta</a>
+      			
+			      <hr>
       			
     		</div>
   		</div>
+      <hr>
+
+      <div id="consulta_1">
+        <h3>Riesgos Generales</h3>
+
+        <select class="form-control" id="sel1" name="sellist1">
+          <option>Código</option>
+          <option>Nombre</option>
+          <option>Tipo de riesgo</option>
+        </select>
+        <input type="text" name="buscar">
+        <button type="button" class="btn btn-primary">Buscar</button>
+
+
+        <table class="table">
+
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Clasificación</th>
+              <th>Riesgo</th>
+              <th>Categoría</th>
+              <th>SubCategoría</th>
+              <th>Causas</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+      <hr>
+      <div id="consulta_2">
+        <h3>Riesgos Específicos</h3>
+
+        <select class="form-control" id="sel1" name="sellist1">
+          <option>Código</option>
+          <option>Nombre</option>
+          <option>Tipo de riesgo</option>
+        </select>
+        <input type="text" name="buscar">
+        <button type="button" class="btn btn-primary">Buscar</button>
+
+
+        <table class="table">
+
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Riesgo</th>
+              <th>Area de riesgo </th>
+              <th>Dependencia</th>
+              <th>Causas</th>
+              <th>Fecha de identificación</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
       <hr>
       <a style="margin-left: 40%;" href="diccionario.html" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
       <a href="Analisis.html" class="btn btn-primary"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>

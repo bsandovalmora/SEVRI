@@ -16,6 +16,7 @@
     
   	<link rel="stylesheet" type="text/css" href="css/identificacion.css">
   	<link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
   </head>
   <body>
 
@@ -24,19 +25,19 @@
   	</div>
   	<hr>
   	<ul class="sidenav">
-      <li><a class="active" href="main.html">Inicio</a></li>
-      <li><a href="#news">SEVRI</a>
+      <li><a href="main.html">Inicio</a></li>
+      <li><a class="active" href="">SEVRI</a>
         <ul>
             <li><a href="diccionario.html">Diccionario de Riesgos</a></li>
             <li><a href="identificacion.html">Identificacion de Riesgos</a></li>
-            <li><a href="Analisis.html">Analisis y Evaluacion de Riesgos</a></li>
+            <li><a class="active" href="Analisis.html">Analisis y Evaluacion de Riesgos</a></li>
             <li><a href="Administracion.html">Administracion de Riesgos</a></li>
             <li><a href="comunicacion.html">Comunicacion de Riesgos</a></li>
         </ul>
 
       </li>
   
-  </ul>
+    </ul>
   	<div class="container">
   		<h2 style="background-color: #193441; color: white; text-align: center; margin-top: 5%;" >Analisis y Evaluacion de Riesgos</h2>
   		<div class="row">
@@ -46,59 +47,27 @@
         			<div class="form-group">
                   <textarea class="form-control" rows="5" id="descripcion" placeholder="Descripcion" style="margin-top: 2%;"></textarea>
               </div>
-        			<input type="number" class="form-control form-control" placeholder="Probabilidad" style="margin-top: 2%;">
-        			<input type="number" class="form-control form-control" placeholder="Impacto" style="margin-top: 2%;">
-        			<input type="number" class="form-control form-control" placeholder="Nivel de riesgo inherente" style="margin-top: 2%;">
+              <label style="margin-top: 2%;" for="sellist1">Probabilidad</label>
+              <select class="form-control form-control" id="sel1" name="sellist1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <label style="margin-top: 2%;" for="sellist1">Impacto</label>
+              <select class="form-control form-control" id="sel1" name="sellist1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+        			<input type="number" class="form-control form-control" placeholder="Nivel de riesgo inherente" style="margin-top: 2%;" readonly>
         			<hr>
-        			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-      		Consulta
-    			</button>
+        			<a href="#consulta_1" class="btn btn-info" role="button">Consulta</a>
 
-
-    			<div class="modal" id="myModal">
-      			<div class="modal-dialog">
-        				<div class="modal-content">
-        
-     
-          				<div class="modal-header">
-            					<h4 class="modal-title">Consulta</h4>
-            					<button type="button" class="close" data-dismiss="modal">&times;</button>
-          				</div>
-          
-    
-          				<div class="modal-body">
-          					<input type="text" class="form-control form-control" placeholder="Codigo..." style="margin-top: 1%;">
-          					<hr>
-          					<button type="button" class="btn btn-primary">Buscar</button>
-          					<hr>
-          					<table class="table">
-      							<thead>
-        								<tr>
-          								<th>Codigo</th>
-          								<th>Descripcion</th>
-          								<th>Probabilidad</th>
-        								</tr>
-      							</thead>
-      							<tbody>
-        								<tr>
-          								<td></td>
-          								<td></td>
-          								<td></td>
-                          <td></td>
-        								</tr>
-      							</tbody>
-    							</table>
-            				
-          				</div>
-          
-          				<div class="modal-footer">
-            					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-          				</div>
-          
-        				</div>
-      			</div>
-    			</div>
-  			<hr>
+  			     <hr>
         			
       		</div>
       		<div class="col-sm-4">
@@ -123,68 +92,11 @@
               <option>4</option>
               <option>5</option>
             </select>
-        			<input type="number" class="form-control form-control" placeholder="Nivel de riesgo residual" style="margin-top: 2%;">
+        			<input type="number" class="form-control form-control" placeholder="Nivel de riesgo residual" style="margin-top: 2%;" readonly>
         			<input type="date" class="form-control form-control" placeholder="Fecha de aplicacion:" style="margin-top: 2%;">
         			<hr>
-        			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-      		Consulta
-    			</button>
-
-
-    			<div class="modal" id="myModal">
-      			<div class="modal-dialog">
-        				<div class="modal-content">
-        
-     
-          				<div class="modal-header">
-            					<h4 class="modal-title">Consulta</h4>
-            					<button type="button" class="close" data-dismiss="modal">&times;</button>
-          				</div>
-          
-    
-          				<div class="modal-body">
-          					<input type="text" class="form-control form-control" placeholder="Codigo..." style="margin-top: 1%;">
-          					<hr>
-          					<button type="button" class="btn btn-primary">Buscar</button>
-          					<hr>
-          					<table class="table">
-      							<thead>
-        								<tr>
-          								<th>Firstname</th>
-          								<th>Lastname</th>
-          								<th>Email</th>
-        								</tr>
-      							</thead>
-      							<tbody>
-        								<tr>
-          								<td>John</td>
-          								<td>Doe</td>
-          								<td>john@example.com</td>
-        								</tr>
-        								<tr>
-          								<td>Mary</td>
-          								<td>Moe</td>
-          								<td>mary@example.com</td>
-        								</tr>
-        								<tr>
-          								<td>July</td>
-          								<td>Dooley</td>
-          								<td>july@example.com</td>
-        								</tr>
-      							</tbody>
-    							</table>
-            				
-          				</div>
-          
-          				<div class="modal-footer">
-            					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-          				</div>
-          
-        				</div>
-      			</div>
-    			</div>
-  			<hr>
-        			
+        			<a href="#consulta_2" class="btn btn-info" role="button">Consulta</a>
+  			<hr>       			
       		</div>
     		</div>
         	<hr>
@@ -192,10 +104,124 @@
         	<button type="button" class="btn btn-primary">Agregar</button>
           <a href="Administracion.html" class="btn btn-primary"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         	<hr>
+
+
+          <div id="consulta_1">
+            <h3>Evaluacion de los controles actuales del riesgo</h3>
+
+            <select class="form-control" id="sel1" name="sellist1">
+              <option>Código</option>
+              <option>Nivel inherente</option>
+              <option>Impacto</option>
+            </select>
+            <input type="text" name="buscar">
+            <button type="button" class="btn btn-primary">Buscar</button>
+
+
+            <table class="table">
+
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Descripción del control actual</th>
+                  <th>Probabilidad</th>
+                  <th>Impacto</th>
+                  <th>Nivel de riesgo inherente</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+        
+         </div>
+         <hr>
+
+         <div id="consulta_2">
+            <h3>Medidas de control de riesgo existentes</h3>
+
+            <select class="form-control" id="sel1" name="sellist1">
+              <option>Código</option>
+              <option>Nivel inherente</option>
+              <option>Impacto</option>
+            </select>
+            <input type="text" name="buscar">
+            <button type="button" class="btn btn-primary">Buscar</button>
+
+
+            <table class="table">
+
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Descripción del control actual</th>
+                  <th>Probabilidad</th>
+                  <th>Impacto</th>
+                  <th>Nivel de riesgo residual</th>
+                  <th>Fecha de Aplicación</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+        
+         </div>
+
   	</div>
   	<hr>
   	
-
   	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="	anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

@@ -17,6 +17,7 @@
   
 	<link rel="stylesheet" type="text/css" href="css/diccionario.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/table.css">
 </head>
 <body>
 
@@ -25,13 +26,13 @@
 	</div>
 	<hr>
 	<ul class="sidenav">
-  		<li><a class="active" href="main.html">Inicio</a></li>
-  		<li><a href="#news">SEVRI</a>
+  		<li><a href="main.html">Inicio</a></li>
+  		<li><a class="active" href="#news">SEVRI</a>
    		 	<ul>
 	      		<li><a href="diccionario.html">Diccionario de Riesgos</a></li>
 	      		<li><a href="identificacion.html">Identificacion de Riesgos</a></li>
 	      		<li><a href="Analisis.html">Analisis y Evaluacion de Riesgos</a></li>
-	      		<li><a href="Administracion.html">Administracion de Riesgos</a></li>
+	      		<li><a class="active" href="Administracion.html">Administracion de Riesgos</a></li>
 	      		<li><a href="comunicacion.html">Comunicacion de Riesgos</a></li>
     		</ul>
 
@@ -42,6 +43,7 @@
 		<div class="texto">
 			<h2 style="background-color: #193441; color: white" >Administraci&oacuten de riesgos</h2>
 			<hr>
+			<input type="text" class="form-control form-control" placeholder="Codigo riesgo" style="margin-top: 2%;">
 			<div>Tipo de Riesgo</div>
 			<select class="form-control" id="sel1" name="sellist1" >
 				<option>Alto</option>
@@ -69,10 +71,7 @@
 				<option>Bajo</option>
 			</select>
 			<input type="text" class="form-control form-control" placeholder="Variaci&oacute;n del nivel del riesgo con controles" style="margin-top: 2%;">
-			<div class="form-group">
-  				<textarea class="form-control" rows="5" id="descripcion" placeholder="An&aacute;lisis costo/beneficio" style="margin-top: 2%;"></textarea>
-			</div>
-			<input type="text" class="form-control form-control" placeholder="Aceptabilidad del riesgo" style="margin-top: 2%;">
+			<input type="number" class="form-control form-control" placeholder="An&aacute;lisis costo/beneficio" style="margin-top: 2%;">
 			<div>Aceptabilidad del riesgo</div>
 			<select class="form-control" id="sel1" name="sellist1" >
 				<option>Modificar</option>
@@ -85,67 +84,70 @@
   				<textarea class="form-control" rows="5" id="descripcion" placeholder="Resultado de la evaluaci&oacute;n" style="margin-top: 2%;"></textarea>
 			</div>
 			<hr>
-			<a style="margin-left: 40%;" href="Analisis.html" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+			<a style="margin-left: 10%;" href="Analisis.html" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 			<button type="button" class="btn btn-primary">Agregar</button>
+			<a href="#consulta_1" class="btn btn-info" role="button">Consulta</a>
 			<a href="comunicacion.html" class="btn btn-primary"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>    
-			<hr>
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    		Consulta
-  			</button>
-
-
-  			<div class="modal" id="myModal">
-    			<div class="modal-dialog">
-      				<div class="modal-content">
-      
-   
-        				<div class="modal-header">
-          					<h4 class="modal-title">Consulta</h4>
-          					<button type="button" class="close" data-dismiss="modal">&times;</button>
-        				</div>
-        
-  
-        				<div class="modal-body">
-        					<input type="text" class="form-control form-control" style="margin-top: 1%;">
-        					<hr>
-        					<button type="button" class="btn btn-primary">Buscar</button>
-        					<hr>
-        					<table class="table">
-						    <thead>
-						      <tr>
-						        <th>Tipo de riesgo</th>
-						        <th>Prioridad del riesgo</th>
-						        <th>Nivel de riesgo inherente</th>
-						        <th>Nivel de riesgo residual</th>
-						        <th>Grado de afectaci&oacuten</th>
-						        <th>Importancia del objetivo del proceso</th>
-						        <th>An&aacutelisis costo/beneficio</th>
-						      </tr>
-						    </thead>
-						    <tbody>
-						      <tr>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						        <td></td>
-						      </tr>
-						    </tbody>
-						  </table>
-          				
-        				</div>
-        
-        				<div class="modal-footer">
-          					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        				</div>
-        
-      				</div>
-    			</div>
-  			</div>
+			<hr>		
 			<hr>
 		</div>
+
+		<div id="consulta_1">
+
+            <select class="form-control" id="sel1" name="sellist1">
+              <option>Código</option>
+            </select>
+            <input type="text" name="buscar">
+            <button type="button" class="btn btn-primary">Buscar</button>
+
+
+            <table class="table">
+
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Prioridad del riesgo</th>
+				  <th>Inherente</th>
+				  <th>Residual</th>
+				  <th>Afectaci&oacuten</th>
+				  <th>Importancia</th>
+				  <th>Costo/beneficio</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a href="" class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+        
+         </div>
+
 	</div>
 
 
