@@ -53,6 +53,12 @@ ul.sidenav li a:hover:not(.active) {
   background-color: #70B431;
 }
 
+.container{
+    margin-left: 15%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
 
 @media screen and (max-width: 900px) {
   ul.sidenav {
@@ -107,8 +113,4 @@ ul.sidenav li a:hover:not(.active) {
 }
 
 
-.container{
-    margin-left: 15%;
-    padding: 1px 16px;
-    height: 1000px;
-}
+
